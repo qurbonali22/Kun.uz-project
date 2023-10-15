@@ -1,0 +1,42 @@
+### create article type
+POST localhost:8081/article_type/create
+Content-Type:  application/json
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+{
+  "key": "key",
+  "name_uz": "yangi",
+  "name_ru": "noviy",
+  "name_en": "new"
+}
+
+
+### get list
+GET  localhost:8081/article_type/list?page=0&size=20
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+
+### get list
+GET  localhost:8081/article_type/byLang/uz
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+
+
+### update article type
+PUT localhost:8081/article_type/1
+Content-Type:  application/json
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+{
+  "key": "key2",
+  "name_uz": "eski",
+  "name_ru": "stariy",
+  "name_en": "old"
+}
+
+### delete by id
+DELETE localhost:8081/article_type/2
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+
+

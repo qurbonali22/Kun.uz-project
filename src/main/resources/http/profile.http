@@ -1,0 +1,46 @@
+### create
+POST localhost:8081/profile/admin/create
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NzY3MzkzNTAsInVzZXJuYW1lIjoiYWRtaW5AZ21haWwuY29tIiwicm9sZSI6IlJPTEVfQURNSU4iLCJleHAiOjE2NzY4MjU3NTAsImlzcyI6Imt1bnV6IHRlc3QgcG9ydGFsaSJ9.gckpqhppaDUBuB_yNZFPUKT3TU_CLeJoood-G5IPeiwucnPYKey1MquOrmG5hTAPyMjc8oLNwhiwG8vH8PuQog
+
+{
+  "name": "publisher",
+  "surname": "publish",
+  "email": "publisher@gmail.com",
+  "password": "200622az",
+  "role": "ROLE_MODERATOR"
+}
+
+### update admin
+PUT localhost:8081/profile/admin/update
+Content-Type:  application/json
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+
+{
+   "id": 1,
+  "name": "A",
+  "surname": "A",
+  "password": "200622az"
+}
+
+
+### get list
+GET localhost:8081/profile/admin/list?page=0&size=20
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+
+### delete by id
+DELETE localhost:8081/profile/delete/1
+Authorization: Bearer
+
+
+### filter
+POST localhost:8081/profile/admin/filter?page=0&size=10
+Content-Type: application/json
+Authorization: Basic admin@gmail.com d0435003d7ec62e6d7656dff18c42586
+
+{
+  "fromDate":"2022-10-09",
+  "toDate": "2022-12-14"
+}
